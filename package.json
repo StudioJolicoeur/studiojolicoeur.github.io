@@ -1,0 +1,25 @@
+{
+  "name": "studiojolicoeur.github.io",
+  "version": "0.0.0",
+  "description": "Homepage for StudioJolicoeur.com",
+  "main": "index.js",
+  "engines": {
+    "node": "14.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StudioJolicoeur/studiojolicoeur.github.io.git"
+  },
+  "author": "Adam J. Jolicoeur",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/StudioJolicoeur/studiojolicoeur.github.io/issues"
+  },
+  "homepage": "https://github.com/StudioJolicoeur/studiojolicoeur.github.io#readme",
+  "dependencies": {
+    "gulp": "4.0.2"
+  }
+}
