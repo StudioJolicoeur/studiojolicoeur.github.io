@@ -1,0 +1,8 @@
+masonry:
+  - ./masonry/**
+brookfield:
+  - ./brookfield/**
+documentation:
+  - README.md
+  - CHANGELOG.md
+
