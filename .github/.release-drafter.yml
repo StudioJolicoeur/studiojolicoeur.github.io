@@ -1,0 +1,63 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+categories:
+  - title: 'Features'
+    labels:
+      - 'feature'
+      - 'major'
+  - title: 'Bug Fixes'
+    labels:
+      - 'brand-assets'
+      - 'bug'
+      - 'CMS'
+      - 'enhancement'
+      - 'minor'
+  - title: Documentation
+    labels:
+      - 'netlify-cms/pending_publish'
+      - 'documentation'
+  - title: 'Maintenance'
+    labels: 
+      - 'build-improvements'
+      - 'bundler'
+      - 'dependencies'
+      - 'github-actions'
+      - 'npm'
+      - 'security'
+      - 'submodule-update'
+      - 'tools'
+      - 'patch'
+exclude-labels:
+  - 'duplicate'
+  - 'help wanted'
+  - 'invalid'
+  - 'question'
+  - 'wontfix'
+change-template: '- #$NUMBER $TITLE (@$AUTHOR)'
+version-resolver:
+  major:
+    labels:
+      - 'feature'
+      - 'major'
+  minor:
+    labels:
+      - 'bug-fix'
+      - 'documentation'
+      - 'enhancement'
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+      - 'security'
+  default: minor
+template: |
+  ## Changes in this release
+  $CHANGES
+
+  ## Contributors to this release
+  $CONTRIBUTORS
+
+  ## Previous tag  
+  $PREVIOUS_TAG
+no-changes-template: |
+  Confusingly, there were no changes in this release
