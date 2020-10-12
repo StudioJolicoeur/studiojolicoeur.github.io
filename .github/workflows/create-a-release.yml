@@ -17,9 +17,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: 'v$RESOLVED_VERSION'
-          release_name: 'V$RESOLVED_VERSION'
+          tag_name: ${{ github.ref }}
+          release_name: $(( github.ref ))
           body: |
-            $CHANGES
-
-            $TITLE @$AUTHOR (#$NUMBER)
+            ## Changes in this release
