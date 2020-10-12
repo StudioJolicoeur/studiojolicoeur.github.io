@@ -5,4 +5,6 @@ brookfield:
 documentation:
   - README.md
   - CHANGELOG.md
-
+action:
+  - ./github/*.yml
+  - ./github/workflows/*.yml
