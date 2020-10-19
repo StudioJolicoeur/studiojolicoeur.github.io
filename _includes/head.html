@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="#ffffff">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>{% if page.section == "home" %}{{ site.title }}{% else %} StudioJolicoeur: {{ page.title | default: site.title }}{% endif %}</title>
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
+  <link rel="icon" type="image/png" size="16x16" href="{{ site.baseurl }}/assets/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" size="32x32" href="{{ site.baseurl }}/assets/img/favicon-32x32.png">
+  <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/apple-touch-icon.png">
+  <!-- <link rel="manifest" href="{{ site.baseurl }}/manifest.json"> -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
+  <script defer src="{{ site.baseurl }}/assets/js/site.js"></script>
+  <script defer src="{{ site.baseurl }}/assets/js/code-snippets.js"></script>
+  {% if page.custom_js %}
+    {% for js_file in page.custom_js %}
+      <script async src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
+    {% endfor %}
+  {% endif %}
+  {% if page.custom_css %}
+    {% for css_file in page.custom_css %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/{{ css_file }}.css">
+    {% endfor %}
+  {% endif %}
