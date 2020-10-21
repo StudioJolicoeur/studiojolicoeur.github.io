@@ -102,7 +102,10 @@ const
     }))
     .pipe(sourcemaps.init())
     .pipe(sass(cssConfig.sassOpts).on('error', sass.logError))
-    .pipe(postcss([ autoprefixer() ]))
+    .pipe(postcss([
+      require('tailwindcss'),
+      require('autoprefixer')
+    ]))
     .pipe(sourcemaps.write('.'))
     .pipe(size({ showfiles:true }))
     .pipe(gulp.dest(cssConfig.build));
