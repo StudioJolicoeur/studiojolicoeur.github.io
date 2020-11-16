@@ -1,0 +1,44 @@
+# Everything you need to know about configuring the CMS can be found here:-
+# https://www.netlifycms.org/docs/configuration-options/
+
+backend:
+  name: git-gateway # Netlify’s Git Gateway connects to Git provider’s API
+  repo: studiojolicoeur/studiojolicoeur.github.io
+  branch: main # Branch to update (main by default)
+  squash_merges: true
+  commit_messages:
+    create: 'feat: Add [{{collection}}] {{slug}}'
+    update: 'fix: Update [{{collection}}] {{slug}}'
+    delete: 'fix: Delete [{{collection}}] {{slug}}'
+    uploadMedia: 'fix: Media uploaded - {{path}}'
+    deleteMedia: 'fix: Media removed - {{path}}'
+    openAuthoring: '{{author-name}} / {{message}}'
+subfolder: ""
+logo_url:
+publish_mode: editorial_workflow # Enable drafts
+media_folder: "assets/uploads" # Folder where user uploaded files should go
+pull_request_url: https://github.com/studiojolicoeur/studiojolicoeur.github.io/pulls
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts/blog"
+    create: true
+    slug: {{month}}-{{day}}-{{year}}-{{slug}}
+    fields:
+        - label: "Layout"
+          name: "title"
+          widget: "hidden"
+          default: "blog"
+        - label: "Title"
+          name: "title"
+          widget: "string"
+        - label: "Publish Date"
+          name: "date"
+          widget: "datetime"
+        - label: "Featured Image"
+          name: "thumbnail"
+          widget: "image"
+        - label: "Body"
+          name: "body"
+          widget: "markdown"

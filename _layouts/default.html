@@ -6,6 +6,7 @@ layout: compress
 <html data-current="{{ page.section }}" lang="en-us">
 
   {% include head.html %}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <body>
     <div>
@@ -17,6 +18,17 @@ layout: compress
         {% include footer.html %}
       </main>
     </div>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 
 </html>
