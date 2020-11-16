@@ -1,0 +1,76 @@
+# Jekyll config
+
+title: StudioJolicoeur.com
+email: adam@studiojolicoeur.com
+description: >-
+  Welcome to StudioJolicoeur.com
+baseurl: ""
+url: "https://www.studiojolicoeur.com"
+NODE_VERSION:
+NPM_VERSION:
+RUBY_VERSION:
+
+# Set default configs
+destination: ./docs
+permalink: /blog/:title
+publish_mode: editorial_workflow
+section: true
+
+# Set to 'true' to enable Netlify CMS (provided that the configuration file is
+# included)
+# netlifycms: true
+
+# Enable Google Analytics
+# analytics: true
+
+compress_html:
+  clippings: all
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      section: "post"
+
+# Build settings
+markdown: kramdown
+
+# Collections
+collection:
+  logo:
+    output: true
+    permalink: /assets/:name
+
+kramdown:
+  auto_ids: false
+
+sass:
+  sass_dir:  assets
+  style:    compressed
+  load_paths:
+    - node_modules
+
+keep_files:
+  - assets
+  - themes
+
+# Exclude the following files from processing
+exclude:
+  - LICENSE.txt
+  - CONTRIBUTING.md
+  - CHANGELOG.md
+  - netlify.toml
+  - feed.xml
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+  - node_modules
+  - _sass
+  - assets
+  - styles
+  - docs
