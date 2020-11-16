@@ -8,8 +8,8 @@ intro_paragraph: >
   
 permalink: /
 section: home
-custom_js: home
-custom_css: home
+custom_js:
+custom_css:
 ---
 
 <h1>{{ page.title }}</h1>

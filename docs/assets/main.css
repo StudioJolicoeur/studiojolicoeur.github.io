@@ -21674,6 +21674,37 @@ p{
   font-size: 1rem
 }
 
+::-webkit-scrollbar{
+  width:18px
+}
+
+::-webkit-scrollbar-track{
+  background:#151515
+}
+
+::-webkit-scrollbar-thumb{
+  background-color:#151515;
+  border:1px solid transparent;
+  border-radius:20px
+}
+
+@media (prefers-color-scheme: dark){
+  ::-webkit-scrollbar{
+    width:18px
+  }
+
+  ::-webkit-scrollbar-track{
+    background:#151515
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background:#0058cc;
+    background:linear-gradient(180deg, #0058cc 0%, #00b8f0 50%, #01e5ec 100%);
+    border:1px solid transparent;
+    border-radius:20px
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
